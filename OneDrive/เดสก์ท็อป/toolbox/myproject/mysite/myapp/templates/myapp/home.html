@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xxx yyy - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold animate__animated animate__fadeInLeft">XXX YYY</h1>
+            <div class="flex gap-6">
+                <a href="#about" class="hover:text-purple-400 transition">About</a>
+                <a href="#interests" class="hover:text-purple-400 transition">Interests</a>
+                <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative pt-20">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-pulse"></div>
+            <div class="absolute bottom-20 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4">
+            <div class="mb-8 animate__animated animate__zoomIn">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-400 to-blue-500 p-1">
+                    <div class="w-full h-full rounded-full bg-gradient-to-br from-purple-900 to-indigo-900 flex items-center justify-center text-5xl">
+                        👨‍💻
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-6xl md:text-7xl font-bold mb-4 animate__animated animate__fadeInDown">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-blue-400">
+                    XXX YYY
+                </span>
+            </h2>
+
+            <p class="text-2xl md:text-3xl mb-8 animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                Data Science & Software Innovation Student
+            </p>
+
+            <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                2nd Year Student at <span class="text-purple-400 font-semibold">Ubon Ratchathani University</span>
+            </p>
+
+            <div class="flex gap-4 justify-center animate__animated animate__fadeInUp" style="animation-delay: 0.9s;">
+                <button class="px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition transform hover:scale-105">
+                    Learn More
+                </button>
+                <button hx-get="#about" class="px-8 py-3 border-2 border-purple-400 rounded-lg font-semibold hover:bg-purple-400/10 transition">
+                    Explore
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="min-h-screen flex items-center py-20 bg-black/30">
+        <div class="max-w-6xl mx-auto px-4 w-full">
+            <h3 class="text-5xl font-bold mb-12 text-center animate__animated animate__fadeInDown">
+                About <span class="text-purple-400">Me</span>
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate__animated animate__fadeInLeft">
+                    <div class="space-y-6 text-lg text-gray-300">
+                        <p>
+                            Hello! I'm a passionate 2nd-year student at <span class="text-purple-400 font-semibold">Ubon Ratchathani University</span>, 
+                            majoring in <span class="text-blue-400 font-semibold">Data Science and Software Innovation</span>.
+                        </p>
+                        <p>
+                            I'm driven by a curiosity for technology and a passion for solving real-world problems through data and software solutions.
+                        </p>
+                        <p>
+                            When I'm not coding or analyzing data, you'll find me enjoying time with adorable dogs and cats, or diving into the wonderful world of anime! 🐕🐱✨
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 animate__animated animate__fadeInRight">
+                    <div class="bg-purple-500/20 backdrop-blur p-6 rounded-lg border border-purple-400/30 text-center hover:bg-purple-500/30 transition">
+                        <div class="text-4xl mb-3">💻</div>
+                        <h4 class="font-bold">Data Science</h4>
+                    </div>
+                    <div class="bg-blue-500/20 backdrop-blur p-6 rounded-lg border border-blue-400/30 text-center hover:bg-blue-500/30 transition">
+                        <div class="text-4xl mb-3">🚀</div>
+                        <h4 class="font-bold">Software Dev</h4>
+                    </div>
+                    <div class="bg-pink-500/20 backdrop-blur p-6 rounded-lg border border-pink-400/30 text-center hover:bg-pink-500/30 transition">
+                        <div class="text-4xl mb-3">🎨</div>
+                        <h4 class="font-bold">Innovation</h4>
+                    </div>
+                    <div class="bg-green-500/20 backdrop-blur p-6 rounded-lg border border-green-400/30 text-center hover:bg-green-500/30 transition">
+                        <div class="text-4xl mb-3">🐕</div>
+                        <h4 class="font-bold">Dogs</h4>
+                    </div>
+                    <div class="bg-orange-500/20 backdrop-blur p-6 rounded-lg border border-orange-400/30 text-center hover:bg-orange-500/30 transition">
+                        <div class="text-4xl mb-3">🐱</div>
+                        <h4 class="font-bold">Cats</h4>
+                    </div>
+                    <div class="bg-red-500/20 backdrop-blur p-6 rounded-lg border border-red-400/30 text-center hover:bg-red-500/30 transition">
+                        <div class="text-4xl mb-3">✨</div>
+                        <h4 class="font-bold">Anime</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="min-h-screen flex items-center py-20">
+        <div class="max-w-6xl mx-auto px-4 w-full">
+            <h3 class="text-5xl font-bold mb-12 text-center animate__animated animate__fadeInDown">
+                My <span class="text-blue-400">Interests</span>
+            </h3>
+
+            <div x-data="{ active: 0 }" class="grid md:grid-cols-2 gap-8">
+                <!-- Dogs -->
+                <div class="bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur p-8 rounded-xl border border-green-400/30 hover:border-green-400/60 transition animate__animated animate__fadeInUp">
+                    <div class="text-6xl mb-4">🐕</div>
+                    <h4 class="text-2xl font-bold mb-4">Dogs</h4>
+                    <p class="text-gray-300">
+                        I absolutely love dogs! Their loyalty, playfulness, and unconditional love make them amazing companions. 
+                        Whether it's a big fluffy Golden Retriever or a tiny Chihuahua, all dogs bring joy to my life.
+                    </p>
+                </div>
+
+                <!-- Cats -->
+                <div class="bg-gradient-to-br from-orange-500/20 to-red-500/20 backdrop-blur p-8 rounded-xl border border-orange-400/30 hover:border-orange-400/60 transition animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="text-6xl mb-4">🐱</div>
+                    <h4 class="text-2xl font-bold mb-4">Cats</h4>
+                    <p class="text-gray-300">
+                        Cats are mysterious, elegant, and full of personality. Their independence and adorable quirks make them 
+                        wonderful pets. I love watching them play, sleep, and do their silly cat things!
+                    </p>
+                </div>
+
+                <!-- Anime -->
+                <div class="bg-gradient-to-br from-pink-500/20 to-purple-500/20 backdrop-blur p-8 rounded-xl border border-pink-400/30 hover:border-pink-400/60 transition md:col-span-2 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <div class="text-6xl mb-4">✨</div>
+                    <h4 class="text-2xl font-bold mb-4">Anime & Manga</h4>
+                    <p class="text-gray-300 mb-4">
+                        Anime is my escape to amazing worlds filled with incredible stories, beautiful art, and memorable characters. 
+                        From action-packed adventures to heartwarming slice-of-life stories, anime brings creativity and inspiration to my life.
+                    </p>
+                    <div class="flex flex-wrap gap-3 text-sm">
+                        <span class="px-4 py-2 bg-purple-500/30 rounded-full">Shonen</span>
+                        <span class="px-4 py-2 bg-pink-500/30 rounded-full">Shoujo</span>
+                        <span class="px-4 py-2 bg-blue-500/30 rounded-full">Slice of Life</span>
+                        <span class="px-4 py-2 bg-red-500/30 rounded-full">Fantasy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="min-h-screen flex items-center py-20 bg-black/30">
+        <div class="max-w-6xl mx-auto px-4 w-full text-center">
+            <h3 class="text-5xl font-bold mb-8 animate__animated animate__fadeInDown">
+                Get in <span class="text-purple-400">Touch</span>
+            </h3>
+
+            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto animate__animated animate__fadeInUp">
+                Interested in collaborating or just want to chat? Feel free to reach out!
+            </p>
+
+            <div class="flex gap-6 justify-center flex-wrap animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                <a href="mailto:xxxyyy@example.com" class="px-8 py-3 bg-purple-500 rounded-lg font-semibold hover:bg-purple-600 transition transform hover:scale-105">
+                    Email Me
+                </a>
+                <a href="#" class="px-8 py-3 bg-blue-500 rounded-lg font-semibold hover:bg-blue-600 transition transform hover:scale-105">
+                    LinkedIn
+                </a>
+                <a href="#" class="px-8 py-3 bg-gray-700 rounded-lg font-semibold hover:bg-gray-600 transition transform hover:scale-105">
+                    GitHub
+                </a>
+            </div>
+
+            <p class="text-gray-400 mt-12 animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                © 2025 XXX YYY. All rights reserved. 🚀
+            </p>
+        </div>
+    </section>
+
+    <!-- Alpine JS Interactions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

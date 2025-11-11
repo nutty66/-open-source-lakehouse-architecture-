@@ -1,0 +1,19 @@
+{
+  "name": "fancy-landing-page",
+  "version": "1.0.0",
+  "description": "A fancy landing page to introduce myself.",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss src/css/styles.css -o public/css/styles.css",
+    "watch": "postcss src/css/styles.css -o public/css/styles.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.2.19",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "animate.css": "^4.1.1",
+    "alpinejs": "^3.x.x",
+    "htmx.org": "^1.6.1"
+  },
+  "devDependencies": {}
+}
