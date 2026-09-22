@@ -1,0 +1,6 @@
+time,mode,input,diagnosis_class,confidence,new_columns,missing_columns,status,ge_checks_passed,rollback,result
+2026-09-22T05:00:00Z,alert,samples/input_with_new_col.csv,schema_drift,0.9,discount,,detected,,false,success
+2026-09-22T06:00:00Z,suggest-pr,samples/input_with_new_col.csv,schema_drift,0.9,discount,,pr_suggested,,false,success
+2026-09-22T06:30:00Z,auto-staging,samples/input_with_new_col.csv,schema_drift,0.9,discount,,staging_applied,true,false,success
+2026-09-22T07:00:00Z,auto-staging,samples/input_missing_price.csv,missing_columns,0.95,,price,check_failed,false,true,rollback_successful
+2026-09-22T07:30:00Z,auto-staging,samples/input_with_new_col.csv,schema_drift,0.9,discount,,pr_created,true,false,success

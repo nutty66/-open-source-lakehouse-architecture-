@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: superset_redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: superset_postgres
+    environment:
+      POSTGRES_DB: superset
+      POSTGRES_USER: superset
+      POSTGRES_PASSWORD: superset
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U superset" ]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  superset:
+    image: apache/superset:latest
+    container_name: superset
+    environment:
+      SUPERSET_ENV: production
+      FLASK_ENV: production
+      SUPERSET_SECRET_KEY: test_key_change_me
+      SUPERSET_LOAD_EXAMPLES: "no"
+      DATABASE_URL: postgresql://superset:superset@postgres:5432/superset
+      REDIS_URL: redis://redis:6379/0
+    ports:
+      - "8088:8088"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: |
+      sh -c "
+      superset db upgrade &&
+      superset fab create-admin --username admin --password admin --firstname Admin --lastname Admin --email admin@superset.com &&
+      superset load_examples &&
+      superset run -h 0.0.0.0 -p 8088
+      "
+    volumes:
+      - ./superset_config.py:/app/superset_config.py
+
+volumes:
+  postgres_data:
