@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+*.json.bak
+audit_log.json
+prs/pr_github_*.md
+staging/expected_schema_backup_*.json
+.DS_Store
+*.log
+.vscode/
+.idea/

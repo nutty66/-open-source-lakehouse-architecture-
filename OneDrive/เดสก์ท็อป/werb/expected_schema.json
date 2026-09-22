@@ -1,0 +1,12 @@
+{
+  "dataset": "sales_raw",
+  "columns": [
+    "id",
+    "name",
+    "price"
+  ],
+  "types": {
+    "id": "number",
+    "price": "number"
+  }
+}
